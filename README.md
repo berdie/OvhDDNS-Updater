@@ -1,4 +1,4 @@
-# OvhDDNS-Updater 
+# OvhDDNS-Updater for Windows
 #### Ovh DynHost Ip Updater
 Il client aggiorna i record di tipo A
 Al primo avvio crea un file di configurazione nella cartella di installazione (default: 'C:\Program Files (x86)\OvhDDNS\OvhDDNS-Updater-Client') 'config.json'
