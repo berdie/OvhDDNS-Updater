@@ -17,3 +17,4 @@ e, dopo aver effettuato di il login, imposta:
 - Validity: ad esempio “Unlimited”
 usa il pulsante “+” per aggiungere le regole di accesso (GET, POST, PUT, DELETE) sui path di tuo interesse, p.es. /domain/zone/*
 Al click su Create Keys, la pagina ti restituirà insieme ad appKey/appSecret anche la Consumer Key.
+Versione .Net Framework 4.8
