@@ -1,0 +1,18 @@
+{
+  "apiBaseUrl": "https://eu.api.ovh.com/1.0/domain/zone/",
+  "ovhCredentials": {
+    "applicationKey": "YOUR_APPLICATION_KEY",
+    "applicationSecret": "YOUR_APPLICATION_SECRET",
+    "consumerKey": "YOUR_CONSUMER_KEY"
+  },
+  "dnsRecords": [
+    {
+      "domain": "example.com",
+      "subdomain": "www"
+    },
+    {
+      "domain": "example.com",
+      "subdomain": "mail"
+    }
+  ]
+}
