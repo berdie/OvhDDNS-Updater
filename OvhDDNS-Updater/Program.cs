@@ -80,7 +80,6 @@ namespace OvhDDNS_Updater
             Console.WriteLine($"Aggiornamento record con ID: {recordId}");
 
             // 2. Aggiorna il record DNS con il nuovo IP
-            // Correggiamo l'URL per puntare al record specifico che vogliamo aggiornare
             string apiUrl = $"{LoadConfiguration().ApiBaseUrl}{domain}/record/{recordId}";
             string method = "PUT";
             string body = $"{{\"target\":\"{ip}\"}}";
@@ -122,7 +121,6 @@ namespace OvhDDNS_Updater
         }
 
 
-        // Modifica anche il metodo GetDnsRecordIdAsync per restituire long invece di int
         private static async Task<long> GetDnsRecordIdAsync(OvhCredentials credentials, string domain, string subdomain)
         {
             string apiUrl = $"{LoadConfiguration().ApiBaseUrl}{domain}/record?fieldType=A&subDomain={subdomain}";
@@ -235,7 +233,7 @@ namespace OvhDDNS_Updater
             string json = File.ReadAllText(configPath);
             return JsonSerializer.Deserialize<Config>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
-
+        // Crea il file di configurazione se non esiste
         private static void CreateSampleConfigFile()
         {
             Config sampleConfig = new Config
@@ -276,7 +274,7 @@ namespace OvhDDNS_Updater
 
     public class Config
     {
-        public string ApiBaseUrl { get; set; } // Nuova proprietà per l'URL base
+        public string ApiBaseUrl { get; set; } 
         public OvhCredentials OvhCredentials { get; set; }
         public DnsRecord[] DnsRecords { get; set; }
     }
